@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.om.model.User.Limit;
+
 /**
  * User entity. @author MyEclipse Persistence Tools
  */
@@ -13,6 +15,7 @@ public class User implements java.io.Serializable {
 
 	// Fields
 
+	public enum Limit{SuperManager,FinanceManager,Manager,Member}
 	private Integer userid;
 	private Om om;
 	private String userName;
@@ -38,15 +41,15 @@ public class User implements java.io.Serializable {
 	/** default constructor */
 	public User() {
 	}
-
 	/** minimal constructor */
 	public User(Om om, String userPassword, Integer userLimit,
-			Float userBalance, Boolean deleteflag) {
+			Float userBalance, Boolean deleteflag, Timestamp userCreatetime) {
 		this.om = om;
 		this.userPassword = userPassword;
 		this.userLimit = userLimit;
 		this.userBalance = userBalance;
 		this.deleteflag = deleteflag;
+		this.userCreatetime = userCreatetime;
 	}
 
 	/** full constructor */
@@ -228,6 +231,10 @@ public class User implements java.io.Serializable {
 
 	public void setLogs(Set logs) {
 		this.logs = logs;
+	}
+
+	public void setUserLimit(Limit l) {
+		this.userLimit=l.ordinal();
 	}
 
 }

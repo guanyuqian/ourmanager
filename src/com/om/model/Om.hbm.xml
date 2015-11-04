@@ -25,7 +25,7 @@
             <column name="om_location" length="100" />
         </property>
         <property name="omCreatetime" type="java.sql.Timestamp">
-            <column name="om_createtime" length="19" />
+            <column name="om_createtime" length="19" not-null="true" />
         </property>
         <property name="omMoney" type="java.lang.Integer">
             <column name="om_money" />

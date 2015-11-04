@@ -28,12 +28,14 @@ public class Purchase implements java.io.Serializable {
 
 	/** minimal constructor */
 	public Purchase(Bill bill, User user, Om om, Integer purchaseType,
-			Float purchaseMoney, Boolean deleteflag) {
+			Float purchaseMoney, Timestamp purchaseCreatetime,
+			Boolean deleteflag) {
 		this.bill = bill;
 		this.user = user;
 		this.om = om;
 		this.purchaseType = purchaseType;
 		this.purchaseMoney = purchaseMoney;
+		this.purchaseCreatetime = purchaseCreatetime;
 		this.deleteflag = deleteflag;
 	}
 

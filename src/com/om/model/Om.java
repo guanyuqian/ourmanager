@@ -33,8 +33,9 @@ public class Om implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Om(String omName, Integer headcount) {
+	public Om(String omName, Timestamp omCreatetime, Integer headcount) {
 		this.omName = omName;
+		this.omCreatetime = omCreatetime;
 		this.headcount = headcount;
 	}
 
@@ -57,6 +58,21 @@ public class Om implements java.io.Serializable {
 	}
 
 	// Property accessors
+
+	public Om(Om om) {
+		this.omName = om.omName;
+		this.omDes = om.omDes;
+		this.omLogoUrl = om.omLogoUrl;
+		this.omLocation = om.omLocation;
+		this.omCreatetime = om.omCreatetime;
+		this.omMoney =om. omMoney;
+		this.omBank =om. omBank;
+		this.headcount = om.headcount;
+		this.users = om.users;
+		this.logs = om.logs;
+		this.purchases =om. purchases;
+		this.bills = om.bills;
+	}
 
 	public Integer getOmid() {
 		return this.omid;

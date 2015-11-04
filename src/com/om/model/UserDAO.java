@@ -4,6 +4,7 @@ import java.sql.Timestamp;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
+
 import org.hibernate.LockOptions;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -13,6 +14,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.om.dao.IUserDAO;
 
 /**
  * A data access object (DAO) providing persistence and search support for User
@@ -26,7 +29,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @author MyEclipse Persistence Tools
  */
 @Transactional
-public class UserDAO {
+public class UserDAO  implements IUserDAO{
 	private static final Logger log = LoggerFactory.getLogger(UserDAO.class);
 	// property constants
 	public static final String USER_NAME = "userName";

@@ -25,7 +25,7 @@
             </column>
         </property>
         <property name="billCreatetime" type="java.sql.Timestamp">
-            <column name="bill_createtime" length="19" />
+            <column name="bill_createtime" length="19" not-null="true" />
         </property>
         <property name="billStatus" type="java.lang.Integer">
             <column name="bill_status" not-null="true">

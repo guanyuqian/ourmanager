@@ -28,7 +28,7 @@
             <column name="purchase_money" precision="12" scale="0" not-null="true" />
         </property>
         <property name="purchaseCreatetime" type="java.sql.Timestamp">
-            <column name="purchase_createtime" length="19" />
+            <column name="purchase_createtime" length="19" not-null="true" />
         </property>
         <property name="deleteflag" type="java.lang.Boolean">
             <column name="deleteflag" not-null="true" />

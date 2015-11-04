@@ -6,5 +6,8 @@
 			<result name="success">/MyJsp.jsp</result>
 			<result name="error">/index.jsp</result>
 		</action>
+		<action name="buildOM" class="OmAction" method="buildOM">
+			<result name="success">/MyJsp.jsp</result>
+		</action>
 	</package>
 </struts>    

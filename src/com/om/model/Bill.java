@@ -31,11 +31,12 @@ public class Bill implements java.io.Serializable {
 
 	/** minimal constructor */
 	public Bill(Om om, String billName, Float billMoney, Integer billType,
-			Integer billStatus, Boolean deleteflag) {
+			Timestamp billCreatetime, Integer billStatus, Boolean deleteflag) {
 		this.om = om;
 		this.billName = billName;
 		this.billMoney = billMoney;
 		this.billType = billType;
+		this.billCreatetime = billCreatetime;
 		this.billStatus = billStatus;
 		this.deleteflag = deleteflag;
 	}

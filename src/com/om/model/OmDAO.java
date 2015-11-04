@@ -28,7 +28,8 @@ import com.om.dao.IOmDAO;
  * @author MyEclipse Persistence Tools
  */
 @Transactional
-public class OmDAO implements IOmDAO{
+public class OmDAO implements IOmDAO
+{
 	private static final Logger log = LoggerFactory.getLogger(OmDAO.class);
 	// property constants
 	public static final String OM_NAME = "omName";

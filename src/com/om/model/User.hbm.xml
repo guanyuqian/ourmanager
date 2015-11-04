@@ -8,7 +8,6 @@
     <class name="com.om.model.User" table="user" catalog="omdatabase">
         <id name="userid" type="java.lang.Integer">
             <column name="userid" />
-            <generator class="identity" />
         </id>
         <many-to-one name="om" class="com.om.model.Om" fetch="select">
             <column name="omid" not-null="true" />
@@ -20,7 +19,9 @@
             <column name="user_password" length="45" not-null="true" />
         </property>
         <property name="userLimit" type="java.lang.Integer">
-            <column name="user_limit" not-null="true" />
+            <column name="user_limit" not-null="true">
+                <comment>0,super;1,finance;2,manager;3,member</comment>
+            </column>
         </property>
         <property name="userBalance" type="java.lang.Float">
             <column name="user_balance" precision="12" scale="0" not-null="true" />
@@ -56,7 +57,7 @@
             <column name="deleteflag" not-null="true" />
         </property>
         <property name="userCreatetime" type="java.sql.Timestamp">
-            <column name="user_createtime" length="19" />
+            <column name="user_createtime" length="19" not-null="true" />
         </property>
         <set name="purchases" inverse="true">
             <key>
